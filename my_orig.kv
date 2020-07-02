@@ -1,0 +1,34 @@
+#:kivy 1.0.9
+
+
+<GameWidget>:   
+    d:30
+    canvas:
+        Rectangle:
+            pos: 0 , root.center_y+150
+            size: root.width, 10
+        Rectangle:
+            pos: 350 , 200
+            size: 25 , 50 
+            source: "bat.jpg"
+        Rectangle:
+            pos: 350 , 0
+            size: 75 , 150
+            source: "wicket.jpg"
+        
+        Ellipse:
+            pos : 380,350
+            size: self.d,self.d
+            source: "ball.jpg"
+            
+    Label:
+        font_size: 70  
+        center_x: root.width / 4
+        top: root.top - 50
+        text: "LETS"
+        
+    Label:
+        font_size: 70  
+        center_x: root.width * 3 / 4
+        top: root.top - 50
+        text: "PLAY"
