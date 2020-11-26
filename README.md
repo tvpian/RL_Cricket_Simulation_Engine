@@ -6,4 +6,3 @@ To be done:
 1) Train an agent(Batsman) skilled enough to play any ball.
 2) Translate the 2D simulation to a 3D environment.
 
-### The code repo cannot be shared due to corporate policies. For more informations and details, contact: tharunv.pvit@gmail.com
