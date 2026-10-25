@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cricket-strategy-rl"
+version = "0.1.0"
+description = "Hands-on batting and bowling reinforcement learning environments"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "gymnasium>=1.0,<2"]
+
+[project.optional-dependencies]
+train = ["stable-baselines3>=2.4,<3"]
+dev = ["pytest>=8,<10"]
+gui = ["Kivy==2.3.1"]
+browser = ["playwright>=1.50,<2"]
+analysis = ["matplotlib>=3.8,<4"]
+
+[tool.setuptools.packages.find]
+include = ["cricket_rl*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.package-data]
+cricket_rl = ["dashboard.html", "dashboard.css", "dashboard.js", "learn.html"]

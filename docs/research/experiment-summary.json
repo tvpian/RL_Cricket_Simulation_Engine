@@ -1,0 +1,626 @@
+{
+  "config": {
+    "steps": 16384,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "episodes": 100
+  },
+  "constant_selection": {
+    "validation_seed": 50000,
+    "mean_rewards": {
+      "0": -48.34,
+      "1": -49.95,
+      "2": -51.46,
+      "3": -16.08,
+      "4": -15.97,
+      "5": -54.16,
+      "6": -47.74,
+      "7": -48.98,
+      "8": -50.33
+    },
+    "selected_action": 4
+  },
+  "provenance": {
+    "python": "3.12.14",
+    "packages": {
+      "numpy": "1.26.4",
+      "gymnasium": "1.4.0"
+    },
+    "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+    "dirty": true,
+    "observation_version": 2,
+    "source_sha256": {
+      "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+      "benchmark.py": "ce22a7a69b1a29d15ed98264f3da60b74830ba5dc0de33b65ea0b6e421011d10",
+      "env.py": "02aa41c9547b6d965056ff37ba07bb50c9d5cb8cc11cfa1011ebbf4ba549ad21",
+      "experiment.py": "8c3bec15657d36a5e823b34a57dcbb248e441f567dcae89be4574afea57539bb",
+      "physics.py": "cee4f541c969c72b3a3259ebc30fbda8641752341c9d16b0e9067f94c74e16c1",
+      "replay.py": "5126f8198f87af8dba3fca86d1fb0be9fcd91396695ce5f539675d91c7c43778",
+      "report.py": "c0dab318b630de81472106c148dc086fbbd986a704e914646d8d946bc7aa9e81",
+      "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+      "server.py": "9a3004439d23dd6e40bc70f4edf8a06047246367dea684b5168cb4eb652dcf1c"
+    }
+  },
+  "training": {
+    "mixed-1": {
+      "seed": 1,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": false,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 35.346415306999916,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 2,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "benchmark.py": "ffaebd80e37d5b8cf30af63568356fd983eb1f58f36ea517282f9362c6fecc98",
+          "env.py": "02aa41c9547b6d965056ff37ba07bb50c9d5cb8cc11cfa1011ebbf4ba549ad21",
+          "experiment.py": "c9dfe3044b50b0c3291f8c95d0ddfd0b962b6f6e7dd56ce4dba73c40da76f48d",
+          "physics.py": "cee4f541c969c72b3a3259ebc30fbda8641752341c9d16b0e9067f94c74e16c1",
+          "replay.py": "5126f8198f87af8dba3fca86d1fb0be9fcd91396695ce5f539675d91c7c43778",
+          "report.py": "6b3f4f878ea040b7838603994b8baaa6f9adcc3d67a7464c3cc3b963fa254935",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "9a3004439d23dd6e40bc70f4edf8a06047246367dea684b5168cb4eb652dcf1c"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "single-2": {
+      "seed": 2,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": true,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 36.467209130000015,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 2,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "benchmark.py": "ffaebd80e37d5b8cf30af63568356fd983eb1f58f36ea517282f9362c6fecc98",
+          "env.py": "02aa41c9547b6d965056ff37ba07bb50c9d5cb8cc11cfa1011ebbf4ba549ad21",
+          "experiment.py": "c9dfe3044b50b0c3291f8c95d0ddfd0b962b6f6e7dd56ce4dba73c40da76f48d",
+          "physics.py": "cee4f541c969c72b3a3259ebc30fbda8641752341c9d16b0e9067f94c74e16c1",
+          "replay.py": "b0fd28baee9f1cde70dfa7e22c69ca780fa4b8cd6222b6c50b83e9bf54d72b22",
+          "report.py": "6b3f4f878ea040b7838603994b8baaa6f9adcc3d67a7464c3cc3b963fa254935",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "9a3004439d23dd6e40bc70f4edf8a06047246367dea684b5168cb4eb652dcf1c"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "mixed-3": {
+      "seed": 3,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": false,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 35.66802106399996,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 2,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "benchmark.py": "ffaebd80e37d5b8cf30af63568356fd983eb1f58f36ea517282f9362c6fecc98",
+          "env.py": "02aa41c9547b6d965056ff37ba07bb50c9d5cb8cc11cfa1011ebbf4ba549ad21",
+          "experiment.py": "c9dfe3044b50b0c3291f8c95d0ddfd0b962b6f6e7dd56ce4dba73c40da76f48d",
+          "physics.py": "cee4f541c969c72b3a3259ebc30fbda8641752341c9d16b0e9067f94c74e16c1",
+          "replay.py": "5126f8198f87af8dba3fca86d1fb0be9fcd91396695ce5f539675d91c7c43778",
+          "report.py": "6b3f4f878ea040b7838603994b8baaa6f9adcc3d67a7464c3cc3b963fa254935",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "9a3004439d23dd6e40bc70f4edf8a06047246367dea684b5168cb4eb652dcf1c"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "single-4": {
+      "seed": 4,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": true,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 35.75041413500003,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 2,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "benchmark.py": "ffaebd80e37d5b8cf30af63568356fd983eb1f58f36ea517282f9362c6fecc98",
+          "env.py": "02aa41c9547b6d965056ff37ba07bb50c9d5cb8cc11cfa1011ebbf4ba549ad21",
+          "experiment.py": "c9dfe3044b50b0c3291f8c95d0ddfd0b962b6f6e7dd56ce4dba73c40da76f48d",
+          "physics.py": "cee4f541c969c72b3a3259ebc30fbda8641752341c9d16b0e9067f94c74e16c1",
+          "replay.py": "5126f8198f87af8dba3fca86d1fb0be9fcd91396695ce5f539675d91c7c43778",
+          "report.py": "6b3f4f878ea040b7838603994b8baaa6f9adcc3d67a7464c3cc3b963fa254935",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "9a3004439d23dd6e40bc70f4edf8a06047246367dea684b5168cb4eb652dcf1c"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "mixed-2": {
+      "seed": 2,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": false,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 36.00018661299998,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 2,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "benchmark.py": "ffaebd80e37d5b8cf30af63568356fd983eb1f58f36ea517282f9362c6fecc98",
+          "env.py": "02aa41c9547b6d965056ff37ba07bb50c9d5cb8cc11cfa1011ebbf4ba549ad21",
+          "experiment.py": "c9dfe3044b50b0c3291f8c95d0ddfd0b962b6f6e7dd56ce4dba73c40da76f48d",
+          "physics.py": "cee4f541c969c72b3a3259ebc30fbda8641752341c9d16b0e9067f94c74e16c1",
+          "replay.py": "5126f8198f87af8dba3fca86d1fb0be9fcd91396695ce5f539675d91c7c43778",
+          "report.py": "6b3f4f878ea040b7838603994b8baaa6f9adcc3d67a7464c3cc3b963fa254935",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "9a3004439d23dd6e40bc70f4edf8a06047246367dea684b5168cb4eb652dcf1c"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "mixed-4": {
+      "seed": 4,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": false,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 35.09020762199998,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 2,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "benchmark.py": "ffaebd80e37d5b8cf30af63568356fd983eb1f58f36ea517282f9362c6fecc98",
+          "env.py": "02aa41c9547b6d965056ff37ba07bb50c9d5cb8cc11cfa1011ebbf4ba549ad21",
+          "experiment.py": "c9dfe3044b50b0c3291f8c95d0ddfd0b962b6f6e7dd56ce4dba73c40da76f48d",
+          "physics.py": "cee4f541c969c72b3a3259ebc30fbda8641752341c9d16b0e9067f94c74e16c1",
+          "replay.py": "5126f8198f87af8dba3fca86d1fb0be9fcd91396695ce5f539675d91c7c43778",
+          "report.py": "6b3f4f878ea040b7838603994b8baaa6f9adcc3d67a7464c3cc3b963fa254935",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "9a3004439d23dd6e40bc70f4edf8a06047246367dea684b5168cb4eb652dcf1c"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "single-0": {
+      "seed": 0,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": true,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 36.79535472500004,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 2,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "benchmark.py": "ffaebd80e37d5b8cf30af63568356fd983eb1f58f36ea517282f9362c6fecc98",
+          "env.py": "02aa41c9547b6d965056ff37ba07bb50c9d5cb8cc11cfa1011ebbf4ba549ad21",
+          "experiment.py": "c9dfe3044b50b0c3291f8c95d0ddfd0b962b6f6e7dd56ce4dba73c40da76f48d",
+          "physics.py": "cee4f541c969c72b3a3259ebc30fbda8641752341c9d16b0e9067f94c74e16c1",
+          "replay.py": "b0fd28baee9f1cde70dfa7e22c69ca780fa4b8cd6222b6c50b83e9bf54d72b22",
+          "report.py": "6b3f4f878ea040b7838603994b8baaa6f9adcc3d67a7464c3cc3b963fa254935",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "9a3004439d23dd6e40bc70f4edf8a06047246367dea684b5168cb4eb652dcf1c"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "mixed-0": {
+      "seed": 0,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": false,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 35.47147130899998,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 2,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "benchmark.py": "ffaebd80e37d5b8cf30af63568356fd983eb1f58f36ea517282f9362c6fecc98",
+          "env.py": "02aa41c9547b6d965056ff37ba07bb50c9d5cb8cc11cfa1011ebbf4ba549ad21",
+          "experiment.py": "c9dfe3044b50b0c3291f8c95d0ddfd0b962b6f6e7dd56ce4dba73c40da76f48d",
+          "physics.py": "cee4f541c969c72b3a3259ebc30fbda8641752341c9d16b0e9067f94c74e16c1",
+          "replay.py": "5126f8198f87af8dba3fca86d1fb0be9fcd91396695ce5f539675d91c7c43778",
+          "report.py": "6b3f4f878ea040b7838603994b8baaa6f9adcc3d67a7464c3cc3b963fa254935",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "9a3004439d23dd6e40bc70f4edf8a06047246367dea684b5168cb4eb652dcf1c"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "single-1": {
+      "seed": 1,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": true,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 36.86280778599996,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 2,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "benchmark.py": "ffaebd80e37d5b8cf30af63568356fd983eb1f58f36ea517282f9362c6fecc98",
+          "env.py": "02aa41c9547b6d965056ff37ba07bb50c9d5cb8cc11cfa1011ebbf4ba549ad21",
+          "experiment.py": "c9dfe3044b50b0c3291f8c95d0ddfd0b962b6f6e7dd56ce4dba73c40da76f48d",
+          "physics.py": "cee4f541c969c72b3a3259ebc30fbda8641752341c9d16b0e9067f94c74e16c1",
+          "replay.py": "b0fd28baee9f1cde70dfa7e22c69ca780fa4b8cd6222b6c50b83e9bf54d72b22",
+          "report.py": "6b3f4f878ea040b7838603994b8baaa6f9adcc3d67a7464c3cc3b963fa254935",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "9a3004439d23dd6e40bc70f4edf8a06047246367dea684b5168cb4eb652dcf1c"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "single-3": {
+      "seed": 3,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": true,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 36.97780952099993,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 2,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "benchmark.py": "ffaebd80e37d5b8cf30af63568356fd983eb1f58f36ea517282f9362c6fecc98",
+          "env.py": "02aa41c9547b6d965056ff37ba07bb50c9d5cb8cc11cfa1011ebbf4ba549ad21",
+          "experiment.py": "c9dfe3044b50b0c3291f8c95d0ddfd0b962b6f6e7dd56ce4dba73c40da76f48d",
+          "physics.py": "cee4f541c969c72b3a3259ebc30fbda8641752341c9d16b0e9067f94c74e16c1",
+          "replay.py": "b0fd28baee9f1cde70dfa7e22c69ca780fa4b8cd6222b6c50b83e9bf54d72b22",
+          "report.py": "6b3f4f878ea040b7838603994b8baaa6f9adcc3d67a7464c3cc3b963fa254935",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "9a3004439d23dd6e40bc70f4edf8a06047246367dea684b5168cb4eb652dcf1c"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    }
+  },
+  "results": [
+    {
+      "scenario": "in_distribution",
+      "policy": "random",
+      "reward": -41.43,
+      "ci": 4.915319881449191,
+      "economy": 14.274562584118438,
+      "wickets": 1.45,
+      "dominant_action": 0.12626041209995617
+    },
+    {
+      "scenario": "in_distribution",
+      "policy": "heuristic",
+      "reward": -35.23,
+      "ci": 5.105194339695659,
+      "economy": 13.861098076020648,
+      "wickets": 1.75,
+      "dominant_action": 0.5999083409715857
+    },
+    {
+      "scenario": "in_distribution",
+      "policy": "constant",
+      "reward": -15.58,
+      "ci": 5.271699664350304,
+      "economy": 14.50032154340836,
+      "wickets": 2.75,
+      "dominant_action": 1.0
+    },
+    {
+      "scenario": "in_distribution",
+      "policy": "PPO single",
+      "reward": -14.52,
+      "ci": 0.0,
+      "economy": 14.22967741935484,
+      "wickets": 2.78,
+      "dominant_action": 1.0
+    },
+    {
+      "scenario": "in_distribution",
+      "policy": "PPO mixed",
+      "reward": -15.156,
+      "ci": 0.7207770537524072,
+      "economy": 14.39206389378695,
+      "wickets": 2.7619999999999996,
+      "dominant_action": 1.0
+    },
+    {
+      "scenario": "heldout_batter",
+      "policy": "random",
+      "reward": -59.31,
+      "ci": 3.9075763836863677,
+      "economy": 18.5703125,
+      "wickets": 1.5,
+      "dominant_action": 0.1262135922330097
+    },
+    {
+      "scenario": "heldout_batter",
+      "policy": "heuristic",
+      "reward": -48.32,
+      "ci": 5.21974863375584,
+      "economy": 17.539336492890996,
+      "wickets": 1.67,
+      "dominant_action": 0.5479262672811059
+    },
+    {
+      "scenario": "heldout_batter",
+      "policy": "constant",
+      "reward": -27.57,
+      "ci": 5.7804481670297125,
+      "economy": 18.90595009596929,
+      "wickets": 2.71,
+      "dominant_action": 1.0
+    },
+    {
+      "scenario": "heldout_batter",
+      "policy": "PPO single",
+      "reward": -26.079999999999995,
+      "ci": 4.931166586175095e-15,
+      "economy": 18.834645669291337,
+      "wickets": 2.72,
+      "dominant_action": 1.0
+    },
+    {
+      "scenario": "heldout_batter",
+      "policy": "PPO mixed",
+      "reward": -26.974,
+      "ci": 1.0131677453689505,
+      "economy": 18.877428325298105,
+      "wickets": 2.714,
+      "dominant_action": 1.0
+    },
+    {
+      "scenario": "green_pitch",
+      "policy": "random",
+      "reward": -61.67,
+      "ci": 3.5503728211686343,
+      "economy": 18.45427477669077,
+      "wickets": 1.33,
+      "dominant_action": 0.12334270791482523
+    },
+    {
+      "scenario": "green_pitch",
+      "policy": "heuristic",
+      "reward": -52.03,
+      "ci": 5.076733267793694,
+      "economy": 18.038906901343214,
+      "wickets": 1.61,
+      "dominant_action": 0.5340360122968819
+    },
+    {
+      "scenario": "green_pitch",
+      "policy": "constant",
+      "reward": -39.1,
+      "ci": 5.897626778303423,
+      "economy": 18.975688816855754,
+      "wickets": 2.43,
+      "dominant_action": 1.0
+    },
+    {
+      "scenario": "green_pitch",
+      "policy": "PPO single",
+      "reward": -34.14,
+      "ci": 0.0,
+      "economy": 18.84041331802526,
+      "wickets": 2.57,
+      "dominant_action": 1.0
+    },
+    {
+      "scenario": "green_pitch",
+      "policy": "PPO mixed",
+      "reward": -37.116,
+      "ci": 3.3726926288791867,
+      "economy": 18.921578617323554,
+      "wickets": 2.4859999999999998,
+      "dominant_action": 1.0
+    },
+    {
+      "scenario": "dry_pitch",
+      "policy": "random",
+      "reward": -59.07,
+      "ci": 3.9860883437832184,
+      "economy": 18.607298001737618,
+      "wickets": 1.54,
+      "dominant_action": 0.12606112054329371
+    },
+    {
+      "scenario": "dry_pitch",
+      "policy": "heuristic",
+      "reward": -49.39,
+      "ci": 5.012615161164819,
+      "economy": 17.44055944055944,
+      "wickets": 1.62,
+      "dominant_action": 0.5457858769931663
+    },
+    {
+      "scenario": "dry_pitch",
+      "policy": "constant",
+      "reward": -30.19,
+      "ci": 5.873310747247873,
+      "economy": 19.259028642590287,
+      "wickets": 2.67,
+      "dominant_action": 1.0
+    },
+    {
+      "scenario": "dry_pitch",
+      "policy": "PPO single",
+      "reward": -28.01,
+      "ci": 0.0,
+      "economy": 18.95280612244898,
+      "wickets": 2.69,
+      "dominant_action": 1.0
+    },
+    {
+      "scenario": "dry_pitch",
+      "policy": "PPO mixed",
+      "reward": -29.318,
+      "ci": 1.48235280866061,
+      "economy": 19.13653963453377,
+      "wickets": 2.678,
+      "dominant_action": 1.0
+    }
+  ],
+  "evaluation_innings": 5200,
+  "validation_innings": 900,
+  "truncated_evaluation_innings": 0
+}

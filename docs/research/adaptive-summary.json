@@ -1,0 +1,1119 @@
+{
+  "config": {
+    "steps": 16384,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "episodes": 100
+  },
+  "scenarios": {
+    "in_distribution": {
+      "styles": [
+        "defensive",
+        "balanced",
+        "aggressive"
+      ],
+      "pitch": "standard"
+    },
+    "heldout_batter": {
+      "styles": [
+        "unseen"
+      ],
+      "pitch": "standard"
+    },
+    "green_pitch": {
+      "styles": [
+        "unseen"
+      ],
+      "pitch": "green"
+    },
+    "static_control": {
+      "styles": [
+        "unseen"
+      ],
+      "pitch": "standard",
+      "adaptive_batting": false
+    },
+    "dry_pitch": {
+      "styles": [
+        "unseen"
+      ],
+      "pitch": "dry"
+    }
+  },
+  "provenance": {
+    "python": "3.12.14",
+    "packages": {
+      "numpy": "1.26.4",
+      "gymnasium": "1.4.0"
+    },
+    "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+    "dirty": true,
+    "observation_version": 3,
+    "source_sha256": {
+      "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+      "batting.py": "db3fdac0653db4db0119e8bdab2a611ec5d0e5f01ad65b690d028098eaf7e266",
+      "benchmark.py": "0852d1fe390697b5bfd2a582d6988d8ef9c30e747492e95fc98259f945344a1f",
+      "env.py": "fb08c0aa623959837d665deb652eb8e9e21322b8d7dbdd6bd3ea8fb88079477d",
+      "experiment.py": "89dc82b7e04b8b96bcf9eb9b0f08ce885309e92b1b9838fe1d61aa2cd2b651ef",
+      "physics.py": "60c4c21fde1fd7805833ebb721d39463240e170ddba1cae34c24bd82210ba98a",
+      "replay.py": "5126f8198f87af8dba3fca86d1fb0be9fcd91396695ce5f539675d91c7c43778",
+      "report.py": "f2434795d0890918c7243e5f1c661410e0afd91d9972dd046367577182943ab0",
+      "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+      "server.py": "e5aadd26e5196bd531ecd6d019b12db077a5bd45086831a27902024f615c6320"
+    }
+  },
+  "training": {
+    "mixed-1": {
+      "seed": 1,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": false,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 36.68534190599894,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 3,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "batting.py": "db3fdac0653db4db0119e8bdab2a611ec5d0e5f01ad65b690d028098eaf7e266",
+          "benchmark.py": "38414344ab724a486057df04603351c5c75fb653f7a5313157f7e35c0ec30d17",
+          "diagnostics.py": "da511230bb7a116924244f75bc8577422a2fc06ebf599b40ac8665c85ec77a25",
+          "env.py": "fb08c0aa623959837d665deb652eb8e9e21322b8d7dbdd6bd3ea8fb88079477d",
+          "experiment.py": "249d82897e812f0e8a563a31ea486d126f6c6143c712337485afd841a1812034",
+          "physics.py": "60c4c21fde1fd7805833ebb721d39463240e170ddba1cae34c24bd82210ba98a",
+          "replay.py": "8a0691ed0f708aceb820f12a039582461f0e5ea46eb06d88a89d2d039f27b01e",
+          "report.py": "f2434795d0890918c7243e5f1c661410e0afd91d9972dd046367577182943ab0",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "69662f4a57c326dcfc69fc3f8607fefb4c19231b9f7676546580bb7335601303"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "single-2": {
+      "seed": 2,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": true,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 36.18018010000014,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 3,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "batting.py": "db3fdac0653db4db0119e8bdab2a611ec5d0e5f01ad65b690d028098eaf7e266",
+          "benchmark.py": "68869470f7c989ed7c13fb6213e5dd89392fecdd2268dd63a241d81047fb804c",
+          "env.py": "fb08c0aa623959837d665deb652eb8e9e21322b8d7dbdd6bd3ea8fb88079477d",
+          "experiment.py": "249d82897e812f0e8a563a31ea486d126f6c6143c712337485afd841a1812034",
+          "physics.py": "60c4c21fde1fd7805833ebb721d39463240e170ddba1cae34c24bd82210ba98a",
+          "replay.py": "8a0691ed0f708aceb820f12a039582461f0e5ea46eb06d88a89d2d039f27b01e",
+          "report.py": "f2434795d0890918c7243e5f1c661410e0afd91d9972dd046367577182943ab0",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "69662f4a57c326dcfc69fc3f8607fefb4c19231b9f7676546580bb7335601303"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "mixed-3": {
+      "seed": 3,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": false,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 36.36998759499875,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 3,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "batting.py": "db3fdac0653db4db0119e8bdab2a611ec5d0e5f01ad65b690d028098eaf7e266",
+          "benchmark.py": "38414344ab724a486057df04603351c5c75fb653f7a5313157f7e35c0ec30d17",
+          "diagnostics.py": "da511230bb7a116924244f75bc8577422a2fc06ebf599b40ac8665c85ec77a25",
+          "env.py": "fb08c0aa623959837d665deb652eb8e9e21322b8d7dbdd6bd3ea8fb88079477d",
+          "experiment.py": "249d82897e812f0e8a563a31ea486d126f6c6143c712337485afd841a1812034",
+          "physics.py": "60c4c21fde1fd7805833ebb721d39463240e170ddba1cae34c24bd82210ba98a",
+          "replay.py": "8a0691ed0f708aceb820f12a039582461f0e5ea46eb06d88a89d2d039f27b01e",
+          "report.py": "f2434795d0890918c7243e5f1c661410e0afd91d9972dd046367577182943ab0",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "69662f4a57c326dcfc69fc3f8607fefb4c19231b9f7676546580bb7335601303"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "single-4": {
+      "seed": 4,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": true,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 36.41974396299884,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 3,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "batting.py": "db3fdac0653db4db0119e8bdab2a611ec5d0e5f01ad65b690d028098eaf7e266",
+          "benchmark.py": "38414344ab724a486057df04603351c5c75fb653f7a5313157f7e35c0ec30d17",
+          "diagnostics.py": "da511230bb7a116924244f75bc8577422a2fc06ebf599b40ac8665c85ec77a25",
+          "env.py": "fb08c0aa623959837d665deb652eb8e9e21322b8d7dbdd6bd3ea8fb88079477d",
+          "experiment.py": "249d82897e812f0e8a563a31ea486d126f6c6143c712337485afd841a1812034",
+          "physics.py": "60c4c21fde1fd7805833ebb721d39463240e170ddba1cae34c24bd82210ba98a",
+          "replay.py": "8a0691ed0f708aceb820f12a039582461f0e5ea46eb06d88a89d2d039f27b01e",
+          "report.py": "f2434795d0890918c7243e5f1c661410e0afd91d9972dd046367577182943ab0",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "69662f4a57c326dcfc69fc3f8607fefb4c19231b9f7676546580bb7335601303"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "mixed-2": {
+      "seed": 2,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": false,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 36.997502682999766,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 3,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "batting.py": "db3fdac0653db4db0119e8bdab2a611ec5d0e5f01ad65b690d028098eaf7e266",
+          "benchmark.py": "38414344ab724a486057df04603351c5c75fb653f7a5313157f7e35c0ec30d17",
+          "diagnostics.py": "da511230bb7a116924244f75bc8577422a2fc06ebf599b40ac8665c85ec77a25",
+          "env.py": "fb08c0aa623959837d665deb652eb8e9e21322b8d7dbdd6bd3ea8fb88079477d",
+          "experiment.py": "249d82897e812f0e8a563a31ea486d126f6c6143c712337485afd841a1812034",
+          "physics.py": "60c4c21fde1fd7805833ebb721d39463240e170ddba1cae34c24bd82210ba98a",
+          "replay.py": "8a0691ed0f708aceb820f12a039582461f0e5ea46eb06d88a89d2d039f27b01e",
+          "report.py": "f2434795d0890918c7243e5f1c661410e0afd91d9972dd046367577182943ab0",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "69662f4a57c326dcfc69fc3f8607fefb4c19231b9f7676546580bb7335601303"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "mixed-4": {
+      "seed": 4,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": false,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 36.69724188100008,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 3,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "batting.py": "db3fdac0653db4db0119e8bdab2a611ec5d0e5f01ad65b690d028098eaf7e266",
+          "benchmark.py": "38414344ab724a486057df04603351c5c75fb653f7a5313157f7e35c0ec30d17",
+          "diagnostics.py": "da511230bb7a116924244f75bc8577422a2fc06ebf599b40ac8665c85ec77a25",
+          "env.py": "fb08c0aa623959837d665deb652eb8e9e21322b8d7dbdd6bd3ea8fb88079477d",
+          "experiment.py": "249d82897e812f0e8a563a31ea486d126f6c6143c712337485afd841a1812034",
+          "physics.py": "60c4c21fde1fd7805833ebb721d39463240e170ddba1cae34c24bd82210ba98a",
+          "replay.py": "8a0691ed0f708aceb820f12a039582461f0e5ea46eb06d88a89d2d039f27b01e",
+          "report.py": "f2434795d0890918c7243e5f1c661410e0afd91d9972dd046367577182943ab0",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "69662f4a57c326dcfc69fc3f8607fefb4c19231b9f7676546580bb7335601303"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "single-0": {
+      "seed": 0,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": true,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 38.08513527499963,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 3,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "batting.py": "db3fdac0653db4db0119e8bdab2a611ec5d0e5f01ad65b690d028098eaf7e266",
+          "benchmark.py": "68869470f7c989ed7c13fb6213e5dd89392fecdd2268dd63a241d81047fb804c",
+          "env.py": "fb08c0aa623959837d665deb652eb8e9e21322b8d7dbdd6bd3ea8fb88079477d",
+          "experiment.py": "249d82897e812f0e8a563a31ea486d126f6c6143c712337485afd841a1812034",
+          "physics.py": "60c4c21fde1fd7805833ebb721d39463240e170ddba1cae34c24bd82210ba98a",
+          "replay.py": "8a0691ed0f708aceb820f12a039582461f0e5ea46eb06d88a89d2d039f27b01e",
+          "report.py": "f2434795d0890918c7243e5f1c661410e0afd91d9972dd046367577182943ab0",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "69662f4a57c326dcfc69fc3f8607fefb4c19231b9f7676546580bb7335601303"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "mixed-0": {
+      "seed": 0,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": false,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 36.369508331999896,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 3,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "batting.py": "db3fdac0653db4db0119e8bdab2a611ec5d0e5f01ad65b690d028098eaf7e266",
+          "benchmark.py": "38414344ab724a486057df04603351c5c75fb653f7a5313157f7e35c0ec30d17",
+          "diagnostics.py": "da511230bb7a116924244f75bc8577422a2fc06ebf599b40ac8665c85ec77a25",
+          "env.py": "fb08c0aa623959837d665deb652eb8e9e21322b8d7dbdd6bd3ea8fb88079477d",
+          "experiment.py": "249d82897e812f0e8a563a31ea486d126f6c6143c712337485afd841a1812034",
+          "physics.py": "60c4c21fde1fd7805833ebb721d39463240e170ddba1cae34c24bd82210ba98a",
+          "replay.py": "8a0691ed0f708aceb820f12a039582461f0e5ea46eb06d88a89d2d039f27b01e",
+          "report.py": "f2434795d0890918c7243e5f1c661410e0afd91d9972dd046367577182943ab0",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "69662f4a57c326dcfc69fc3f8607fefb4c19231b9f7676546580bb7335601303"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "single-1": {
+      "seed": 1,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": true,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 39.06732693699996,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 3,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "batting.py": "db3fdac0653db4db0119e8bdab2a611ec5d0e5f01ad65b690d028098eaf7e266",
+          "benchmark.py": "68869470f7c989ed7c13fb6213e5dd89392fecdd2268dd63a241d81047fb804c",
+          "env.py": "fb08c0aa623959837d665deb652eb8e9e21322b8d7dbdd6bd3ea8fb88079477d",
+          "experiment.py": "249d82897e812f0e8a563a31ea486d126f6c6143c712337485afd841a1812034",
+          "physics.py": "60c4c21fde1fd7805833ebb721d39463240e170ddba1cae34c24bd82210ba98a",
+          "replay.py": "8a0691ed0f708aceb820f12a039582461f0e5ea46eb06d88a89d2d039f27b01e",
+          "report.py": "f2434795d0890918c7243e5f1c661410e0afd91d9972dd046367577182943ab0",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "69662f4a57c326dcfc69fc3f8607fefb4c19231b9f7676546580bb7335601303"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    },
+    "single-3": {
+      "seed": 3,
+      "requested_steps": 16384,
+      "actual_steps": 16384,
+      "single_style": true,
+      "randomize_pitch": false,
+      "env_config": {},
+      "seconds": 36.37493051899946,
+      "provenance": {
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "1.26.4",
+          "gymnasium": "1.4.0"
+        },
+        "git_commit": "9dfb76a89de49057ef2ed3dfc3b8606dc8828c3d",
+        "dirty": true,
+        "observation_version": 3,
+        "source_sha256": {
+          "__init__.py": "61b28e4fd267bcd2db8f72ff081215455b0e9b55675f2e93a2aef4fc4e6f3d29",
+          "batting.py": "db3fdac0653db4db0119e8bdab2a611ec5d0e5f01ad65b690d028098eaf7e266",
+          "benchmark.py": "68869470f7c989ed7c13fb6213e5dd89392fecdd2268dd63a241d81047fb804c",
+          "env.py": "fb08c0aa623959837d665deb652eb8e9e21322b8d7dbdd6bd3ea8fb88079477d",
+          "experiment.py": "249d82897e812f0e8a563a31ea486d126f6c6143c712337485afd841a1812034",
+          "physics.py": "60c4c21fde1fd7805833ebb721d39463240e170ddba1cae34c24bd82210ba98a",
+          "replay.py": "8a0691ed0f708aceb820f12a039582461f0e5ea46eb06d88a89d2d039f27b01e",
+          "report.py": "f2434795d0890918c7243e5f1c661410e0afd91d9972dd046367577182943ab0",
+          "rules.py": "69cbcec73850ae0018b60abc593b604169eb262a87c1e3102d8a4877d69dc3e1",
+          "server.py": "69662f4a57c326dcfc69fc3f8607fefb4c19231b9f7676546580bb7335601303"
+        }
+      },
+      "packages": {
+        "stable-baselines3": "2.9.0",
+        "torch": "2.14.1+cpu"
+      },
+      "ppo": {
+        "n_steps": 256,
+        "batch_size": 64,
+        "device": "cpu"
+      }
+    }
+  },
+  "constant_selection": {
+    "validation_seed": 50000,
+    "mean_rewards": {
+      "0": -79.78,
+      "1": -80.2,
+      "2": -85.98,
+      "3": -61.84,
+      "4": -65.79,
+      "5": -82.63,
+      "6": -80.35,
+      "7": -81.74,
+      "8": -83.84
+    },
+    "selected_action": 3
+  },
+  "results": [
+    {
+      "scenario": "in_distribution",
+      "policy": "random",
+      "reward": -38.3,
+      "ci": 5.132911387617296,
+      "economy": 14.15625,
+      "wickets": 1.63,
+      "dominant_action": 0.124273580688422
+    },
+    {
+      "scenario": "in_distribution",
+      "policy": "heuristic",
+      "reward": -73.79,
+      "ci": 6.474463810286307,
+      "economy": 22.3881782090869,
+      "wickets": 1.35,
+      "dominant_action": 0.5374732334047109
+    },
+    {
+      "scenario": "in_distribution",
+      "policy": "varying",
+      "reward": -22.15,
+      "ci": 6.113048177480856,
+      "economy": 15.878899082568807,
+      "wickets": 2.64,
+      "dominant_action": 0.5580975316074653
+    },
+    {
+      "scenario": "in_distribution",
+      "policy": "constant",
+      "reward": -62.16,
+      "ci": 7.800886553501854,
+      "economy": 21.695174390826566,
+      "wickets": 1.69,
+      "dominant_action": 1.0
+    },
+    {
+      "scenario": "in_distribution",
+      "policy": "PPO single",
+      "reward": -46.254,
+      "ci": 27.261071375388305,
+      "economy": 19.4036565043014,
+      "wickets": 2.074,
+      "dominant_action": 0.8199780395859453
+    },
+    {
+      "scenario": "in_distribution",
+      "policy": "PPO mixed",
+      "reward": -54.668000000000006,
+      "ci": 21.340485149523285,
+      "economy": 20.65215660751436,
+      "wickets": 1.8739999999999999,
+      "dominant_action": 0.9153249850924269
+    },
+    {
+      "scenario": "heldout_batter",
+      "policy": "random",
+      "reward": -59.98,
+      "ci": 3.801803972863516,
+      "economy": 18.318766066838045,
+      "wickets": 1.41,
+      "dominant_action": 0.12562604340567612
+    },
+    {
+      "scenario": "heldout_batter",
+      "policy": "heuristic",
+      "reward": -104.99,
+      "ci": 4.351459952194844,
+      "economy": 28.45284621920136,
+      "wickets": 0.83,
+      "dominant_action": 0.49032523672293127
+    },
+    {
+      "scenario": "heldout_batter",
+      "policy": "varying",
+      "reward": -42.07,
+      "ci": 6.409950705116242,
+      "economy": 20.883773161145424,
+      "wickets": 2.49,
+      "dominant_action": 0.5545154185022027
+    },
+    {
+      "scenario": "heldout_batter",
+      "policy": "constant",
+      "reward": -97.41,
+      "ci": 6.489537639784656,
+      "economy": 28.37888198757764,
+      "wickets": 1.15,
+      "dominant_action": 1.0
+    },
+    {
+      "scenario": "heldout_batter",
+      "policy": "PPO single",
+      "reward": -75.75,
+      "ci": 37.777899529988694,
+      "economy": 25.43960703236719,
+      "wickets": 1.682,
+      "dominant_action": 0.820656542236649
+    },
+    {
+      "scenario": "heldout_batter",
+      "policy": "PPO mixed",
+      "reward": -87.29799999999999,
+      "ci": 30.406547471633534,
+      "economy": 27.009636962877757,
+      "wickets": 1.43,
+      "dominant_action": 0.9214517876489708
+    },
+    {
+      "scenario": "green_pitch",
+      "policy": "random",
+      "reward": -60.6,
+      "ci": 4.270130979941785,
+      "economy": 18.634441087613293,
+      "wickets": 1.42,
+      "dominant_action": 0.12352221769262128
+    },
+    {
+      "scenario": "green_pitch",
+      "policy": "heuristic",
+      "reward": -105.78,
+      "ci": 4.485138199913491,
+      "economy": 28.64136460554371,
+      "wickets": 0.77,
+      "dominant_action": 0.4921275736778361
+    },
+    {
+      "scenario": "green_pitch",
+      "policy": "varying",
+      "reward": -51.32,
+      "ci": 6.272487506306224,
+      "economy": 20.707537688442212,
+      "wickets": 2.17,
+      "dominant_action": 0.5450049455984174
+    },
+    {
+      "scenario": "green_pitch",
+      "policy": "constant",
+      "reward": -97.38,
+      "ci": 6.5666148905511506,
+      "economy": 28.305913739439752,
+      "wickets": 1.09,
+      "dominant_action": 1.0
+    },
+    {
+      "scenario": "green_pitch",
+      "policy": "PPO single",
+      "reward": -79.646,
+      "ci": 31.731391699061916,
+      "economy": 25.35137788228687,
+      "wickets": 1.5079999999999998,
+      "dominant_action": 0.8170759088450688
+    },
+    {
+      "scenario": "green_pitch",
+      "policy": "PPO mixed",
+      "reward": -89.70599999999999,
+      "ci": 25.163688340456293,
+      "economy": 27.050451119402254,
+      "wickets": 1.2879999999999998,
+      "dominant_action": 0.9184965380811079
+    },
+    {
+      "scenario": "static_control",
+      "policy": "random",
+      "reward": -59.31,
+      "ci": 3.9075763836863677,
+      "economy": 18.5703125,
+      "wickets": 1.5,
+      "dominant_action": 0.1262135922330097
+    },
+    {
+      "scenario": "static_control",
+      "policy": "heuristic",
+      "reward": -48.32,
+      "ci": 5.21974863375584,
+      "economy": 17.539336492890996,
+      "wickets": 1.67,
+      "dominant_action": 0.5479262672811059
+    },
+    {
+      "scenario": "static_control",
+      "policy": "varying",
+      "reward": -26.08,
+      "ci": 5.892636011946855,
+      "economy": 18.834645669291337,
+      "wickets": 2.72,
+      "dominant_action": 1.0
+    },
+    {
+      "scenario": "static_control",
+      "policy": "constant",
+      "reward": -26.08,
+      "ci": 5.892636011946855,
+      "economy": 18.834645669291337,
+      "wickets": 2.72,
+      "dominant_action": 1.0
+    },
+    {
+      "scenario": "static_control",
+      "policy": "PPO single",
+      "reward": -26.753999999999998,
+      "ci": 0.8131168895650869,
+      "economy": 18.907266185743076,
+      "wickets": 2.7180000000000004,
+      "dominant_action": 0.8232587859424921
+    },
+    {
+      "scenario": "static_control",
+      "policy": "PPO mixed",
+      "reward": -26.746,
+      "ci": 1.14855972623804,
+      "economy": 18.858613113006896,
+      "wickets": 2.7199999999999998,
+      "dominant_action": 0.8503777087324671
+    },
+    {
+      "scenario": "dry_pitch",
+      "policy": "random",
+      "reward": -56.76,
+      "ci": 4.4683692863495414,
+      "economy": 18.26707800793301,
+      "wickets": 1.54,
+      "dominant_action": 0.12699095996556178
+    },
+    {
+      "scenario": "dry_pitch",
+      "policy": "heuristic",
+      "reward": -102.05,
+      "ci": 5.110475749266245,
+      "economy": 28.13659793814433,
+      "wickets": 0.89,
+      "dominant_action": 0.4849246231155779
+    },
+    {
+      "scenario": "dry_pitch",
+      "policy": "varying",
+      "reward": -37.88,
+      "ci": 6.378456043953464,
+      "economy": 20.374201045903543,
+      "wickets": 2.57,
+      "dominant_action": 0.5579668760708166
+    },
+    {
+      "scenario": "dry_pitch",
+      "policy": "constant",
+      "reward": -95.46,
+      "ci": 6.837275006133288,
+      "economy": 28.25459435230838,
+      "wickets": 1.2,
+      "dominant_action": 1.0
+    },
+    {
+      "scenario": "dry_pitch",
+      "policy": "PPO single",
+      "reward": -72.542,
+      "ci": 39.283411697406116,
+      "economy": 25.117083143652792,
+      "wickets": 1.75,
+      "dominant_action": 0.8215876641918903
+    },
+    {
+      "scenario": "dry_pitch",
+      "policy": "PPO mixed",
+      "reward": -85.516,
+      "ci": 28.39790824136059,
+      "economy": 26.87709504226093,
+      "wickets": 1.4600000000000002,
+      "dominant_action": 0.9228694714131608
+    }
+  ],
+  "history_probes": {
+    "protocol": "30 matched synthetic states; only current-batter memory changes; not a performance evaluation",
+    "results": {
+      "varying": {
+        "states": 30,
+        "history_changed_action_fraction": 1.0,
+        "opposite_length_fraction": 1.0,
+        "action_counts": {
+          "repeated_yorker": [
+            0,
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0
+          ],
+          "repeated_good_length": [
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "fixed:3": {
+        "states": 30,
+        "history_changed_action_fraction": 0.0,
+        "opposite_length_fraction": 0.0,
+        "action_counts": {
+          "repeated_yorker": [
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "repeated_good_length": [
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "mixed-0": {
+        "states": 30,
+        "history_changed_action_fraction": 0.0,
+        "opposite_length_fraction": 0.0,
+        "action_counts": {
+          "repeated_yorker": [
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "repeated_good_length": [
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "mixed-1": {
+        "states": 30,
+        "history_changed_action_fraction": 0.0,
+        "opposite_length_fraction": 0.0,
+        "action_counts": {
+          "repeated_yorker": [
+            0,
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0
+          ],
+          "repeated_good_length": [
+            0,
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "mixed-2": {
+        "states": 30,
+        "history_changed_action_fraction": 0.0,
+        "opposite_length_fraction": 0.0,
+        "action_counts": {
+          "repeated_yorker": [
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "repeated_good_length": [
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "mixed-3": {
+        "states": 30,
+        "history_changed_action_fraction": 0.0,
+        "opposite_length_fraction": 0.0,
+        "action_counts": {
+          "repeated_yorker": [
+            0,
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0
+          ],
+          "repeated_good_length": [
+            0,
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "mixed-4": {
+        "states": 30,
+        "history_changed_action_fraction": 1.0,
+        "opposite_length_fraction": 1.0,
+        "action_counts": {
+          "repeated_yorker": [
+            0,
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0
+          ],
+          "repeated_good_length": [
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "single-0": {
+        "states": 30,
+        "history_changed_action_fraction": 0.0,
+        "opposite_length_fraction": 0.0,
+        "action_counts": {
+          "repeated_yorker": [
+            0,
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0
+          ],
+          "repeated_good_length": [
+            0,
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "single-1": {
+        "states": 30,
+        "history_changed_action_fraction": 1.0,
+        "opposite_length_fraction": 1.0,
+        "action_counts": {
+          "repeated_yorker": [
+            0,
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0
+          ],
+          "repeated_good_length": [
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "single-2": {
+        "states": 30,
+        "history_changed_action_fraction": 1.0,
+        "opposite_length_fraction": 1.0,
+        "action_counts": {
+          "repeated_yorker": [
+            0,
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0
+          ],
+          "repeated_good_length": [
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "single-3": {
+        "states": 30,
+        "history_changed_action_fraction": 0.0,
+        "opposite_length_fraction": 0.0,
+        "action_counts": {
+          "repeated_yorker": [
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "repeated_good_length": [
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "single-4": {
+        "states": 30,
+        "history_changed_action_fraction": 0.0,
+        "opposite_length_fraction": 0.0,
+        "action_counts": {
+          "repeated_yorker": [
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "repeated_good_length": [
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "truncated_evaluation_innings": 0
+}

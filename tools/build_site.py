@@ -1,0 +1,40 @@
+"""Build the GitHub Pages demo from the production UI and Python wheel."""
+import argparse
+import json
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output',type=Path,default=Path('site'))
+    args=parser.parse_args()
+    root=Path(__file__).resolve().parents[1]
+    output=args.output.resolve()
+    output.mkdir(parents=True,exist_ok=True)
+    subprocess.run([sys.executable,'-m','pip','wheel','--no-deps','--no-build-isolation',str(root),'--wheel-dir',str(output)],check=True)
+    html=(root/'cricket_rl/dashboard.html').read_text()
+    html=html.replace('href="/dashboard.css"','href="./dashboard.css"').replace('src="/dashboard.js"','src="./dashboard.js"')
+    html=html.replace('<script src="./dashboard.js" defer>', '<script src="./bootstrap.js" defer></script><script src="./dashboard.js" defer>')
+    html=html.replace('href="/learn','href="./learn.html').replace('href="/api/schema"','href="./schema.json"').replace('href="/"','href="./"')
+    html=html.replace('Environment connected','Browser environment connected')
+    html=html.replace('<main>', '<main><p class="help">Browser-only playground · first load downloads about 18 MB. Training and neural checkpoints use the Python version. <a href="./replay.html">Open an instant replay instead</a>.</p>',1)
+    (output/'index.html').write_text(html)
+    for name in ['dashboard.css','dashboard.js']:
+        shutil.copyfile(root/'cricket_rl'/name,output/name)
+    guide=(root/'cricket_rl/learn.html').read_text().replace('href="/dashboard.css"','href="./dashboard.css"').replace('href="/api/schema"','href="./schema.json"').replace('href="/"','href="./"').replace('href="/#lessonPanel"','href="./#lessonPanel"')
+    (output/'learn.html').write_text(guide)
+    for name in ['bootstrap.js','python-worker.js']:
+        shutil.copyfile(root/'web'/name,output/name)
+    shutil.copyfile(root/'web'/'replay.html',output/'replay.html')
+    from vendor_runtime import bundle
+    bundle(output)
+    from cricket_rl.api import EnvironmentAPI
+    (output/'schema.json').write_text(json.dumps({'environments':[EnvironmentAPI.schema(role) for role in ['batting','bowling']]},indent=2))
+    (output/'.nojekyll').touch()
+    print(f'Browser demo built at {output}')
+
+
+if __name__=='__main__':main()

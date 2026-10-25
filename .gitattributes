@@ -1,0 +1,4 @@
+# Preserve original archived bytes, including historical whitespace.
+legacy/** -whitespace
+# Matplotlib SVG path data includes generated trailing whitespace.
+docs/**/assets/*.svg -whitespace linguist-generated=true
