@@ -11,7 +11,7 @@ dependencies = ["numpy>=1.26,<3", "gymnasium>=1.0,<2"]
 
 [project.optional-dependencies]
 train = ["stable-baselines3>=2.4,<3"]
-dev = ["pytest>=8,<10", "ruff>=0.14,<1"]
+dev = ["pytest>=8,<10", "ruff==0.17.2"]
 gui = ["Kivy==2.3.1"]
 browser = ["playwright>=1.50,<2"]
 analysis = ["matplotlib>=3.8,<4"]
