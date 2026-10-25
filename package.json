@@ -1,0 +1,14 @@
+{
+  "name": "cricket-rl-lab-tooling",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Optional UI formatting and accessibility tooling; not required to run Python or the browser demo",
+  "scripts": {
+    "check:ui": "prettier --check cricket_rl/dashboard.html cricket_rl/dashboard.css cricket_rl/dashboard.js cricket_rl/learn.html web/bootstrap.js web/python-worker.js web/share-card.html",
+    "format:ui": "prettier --write cricket_rl/dashboard.html cricket_rl/dashboard.css cricket_rl/dashboard.js cricket_rl/learn.html web/bootstrap.js web/python-worker.js web/share-card.html"
+  },
+  "devDependencies": {
+    "axe-core": "4.10.3",
+    "prettier": "3.6.2"
+  }
+}

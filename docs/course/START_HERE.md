@@ -104,8 +104,9 @@ state: this **state aliasing** is a deliberate limitation to inspect.
 **Experiments:** change epsilon decay, learning rate, or the state encoding one at
 a time. Plot reward against transitions from `learning.json`. Explain the
 exploration/exploitation trade-off. Do not conclude that a bigger table is always
-better: it also needs more data. The safety truncation is treated as a terminal
-transition in this small teaching implementation.
+better: it also needs more data. A natural termination stops the value bootstrap. A safety truncation resets
+collection but keeps the bootstrap from a valid final observation. This
+distinction matters when implementing Q-learning correctly.
 
 ## 5. Compare neural algorithms
 
@@ -123,7 +124,8 @@ different objectives. Equal environment transitions do not imply equal compute
 or equal gradient updates. Read their parameters in `course_experiment.py` and
 the documentation for the installed Stable-Baselines3 version.
 
-Repeat for bowling. Examine monitor CSVs, metadata, saved models, reward, runs,
+Repeat for bowling. Use a new output directory for each experiment; existing
+checkpoints are protected unless you explicitly pass `--overwrite`. Examine monitor CSVs, metadata, saved models, reward, runs,
 wickets and action distributions. A neural agent can be worse than a simple rule.
 
 ## 6. Reproduce the course study
@@ -145,7 +147,9 @@ pip install -e '.[analysis]'
 python -m cricket_rl.course_plot runs/course-study --output runs/course-plots
 ```
 
-The final test seeds start at 300000. Tune on separate validation seeds, not those
+Training resets advance the environment RNG instead of reusing adjacent episode
+seeds. Q-learning uses a separate exploration RNG stream. Training metadata
+records this protocol and package versions. The final test seeds start at 300000. Tune on separate validation seeds, not those
 test results. The supplied short pilot is a working reference, not an optimized
 leaderboard. See [measured results](RESULTS.md).
 

@@ -5,6 +5,7 @@ playground needs only seeded reset, scalar action validation and observation
 bounds. Physics, rules and role environments remain shared with desktop Python.
 Training and the registered Gym environments continue to use real Gymnasium.
 """
+
 import numpy as np
 
 
@@ -20,7 +21,7 @@ class Env:
     def reset(self, *, seed=None, options=None):
         if seed is not None:
             if not isinstance(seed, (int, np.integer)) or seed < 0:
-                raise ValueError('Seed must be a nonnegative integer')
+                raise ValueError("Seed must be a nonnegative integer")
             self._np_random = np.random.default_rng(seed)
 
     def close(self):
@@ -41,4 +42,8 @@ class Box:
 
     def contains(self, observation):
         values = np.asarray(observation)
-        return values.shape == self.shape and np.can_cast(values.dtype,self.dtype) and bool(np.all(values >= self.low) and np.all(values <= self.high))
+        return (
+            values.shape == self.shape
+            and np.can_cast(values.dtype, self.dtype)
+            and bool(np.all(values >= self.low) and np.all(values <= self.high))
+        )

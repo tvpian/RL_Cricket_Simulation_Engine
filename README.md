@@ -21,7 +21,8 @@ your browser. It contains a replay, not the full decision-making playground.
 
 The browser demo runs real simulator steps using Python/NumPy in a Web Worker.
 You can bat, bowl, edit the field and follow lessons without reaching a private
-cloud IP. Training and PyTorch checkpoint inference use the local Python version.
+cloud IP. The browser includes documented Q-learning demo tables. Training and PyTorch
+checkpoint inference use the local Python version.
 
 ## Run the full simulator on your computer
 
@@ -119,6 +120,7 @@ bowling learners still lost to the varying heuristic. Results include failed
 seeds and uncertainty rather than selecting the best replay.
 
 - [Measured course results and learning curves](docs/course/RESULTS.md)
+- [Public-release audit and verified fixes](docs/quality/AUDIT.md)
 - [Current playground guide](docs/course/UI_GUIDE.md)
 - [Simulator architecture and limitations](docs/research/REPORT.md)
 - [Earlier adaptive-batting experiment](docs/research/ADAPTIVE_RESULTS.md)
@@ -171,3 +173,7 @@ python -m cricket_rl.replay --policy random --deliveries 12 --output runs/replay
 
 The complete browser playground needs HTTP hosting to load its bundled Python
 runtime. It does not fetch third-party packages in the browser. The exported replay is a separate self-contained artifact.
+
+For contributors: `npm ci --ignore-scripts && npm run check:ui` installs only
+optional UI formatting/accessibility tools. `ruff check cricket_rl tools tests`
+and `ruff format --check cricket_rl tools tests` check Python source quality.

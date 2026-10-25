@@ -7,7 +7,9 @@ A narrow browser protocol adapter avoids unavailable multiprocessing vector
 environments in WebAssembly. Desktop training and registered environments still
 use real Gymnasium. This adapter does not duplicate the physics or scoring.
 PyTorch checkpoint inference and training remain features of the Python version;
-those options are not offered in the browser-only demo.
+the browser includes frozen Q-learning tables from predetermined seed 0. Their
+model card is in `models/model-card.json`; they are demonstrations, not selected
+best performers. No weights are updated in the browser.
 
 The build bundles Python, NumPy and Gymnasium with the site (about 18 MB).
 The builder fetches pinned artifacts using HTTPS and checks Pyodide package hashes

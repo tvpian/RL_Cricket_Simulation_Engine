@@ -1,6 +1,6 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cricket Strategy Lab — replay</title>
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cricket RL Lab — replay</title>
 <style>body{background:#0a141c;color:#e9f3f1;font:16px system-ui;max-width:1000px;margin:30px auto;padding:20px}h1{color:#b6f786}canvas{background:#12382c;border-radius:14px;width:100%}button,input,select{margin:6px;padding:9px;border:1px solid #355261;border-radius:6px;background:#10232e;color:inherit}p{color:#b6cad2;line-height:1.6}#timeline{width:95%}.active{border-color:#b6f786}</style>
-<h1>Cricket Strategy Lab</h1><p>Offline delivery replay · ball flight, bat contact, and fielder pursuit</p>
+<h1>Cricket RL Lab</h1><p>Offline delivery replay · ball flight, bat contact, and fielder pursuit</p>
 <div id="deliveries"></div><h2 id="score"></h2><canvas id="field" width="1000" height="650"></canvas>
 <div><button id="play">Pause / play</button><button id="restart">Restart</button><select id="view" aria-label="Camera"><option value="broadcast">Broadcast</option><option value="top">Top down</option><option value="side">Bounce / side view</option></select><label>Speed <input id="speed" type="range" min="0.25" max="4" value="1" step="0.25"></label></div>
 <input id="timeline" type="range" min="0" max="1" value="0" step="1" aria-label="Timeline"><p id="telemetry"></p><p>Blue: moving fielders. Yellow: ball. Shadow: ground projection. Coordinates are in metres. Illustrative, uncalibrated cricket physics. Exported replay is self-contained and requires no network connection.</p>

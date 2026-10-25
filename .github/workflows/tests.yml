@@ -9,6 +9,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -e '.[dev]'
+      - run: ruff check cricket_rl tools tests
+      - run: ruff format --check cricket_rl tools tests
       - run: pytest -q
       - run: python -m cricket_rl.experiment --episodes 10
       - run: python -m cricket_rl.replay --deliveries 6
@@ -19,9 +21,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts
+      - run: npm run check:ui
       - run: pip install -e '.[dev,browser]'
       - run: python -m playwright install --with-deps chromium
-      - run: CRICKET_BROWSER_TEST=1 pytest tests/test_browser.py -q
+      - run: CRICKET_BROWSER_TEST=1 pytest tests/test_browser.py tests/test_accessibility.py -q
   training:
     runs-on: ubuntu-latest
     steps:

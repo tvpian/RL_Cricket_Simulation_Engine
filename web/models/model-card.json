@@ -1,0 +1,146 @@
+{
+  "name": "Seed-0 tabular course demonstration",
+  "algorithm": "Q-learning",
+  "seed": 0,
+  "selection": "Training seed chosen in advance; not selected by test performance.",
+  "budget_per_role": 8192,
+  "reward": "Batting: runs - 8*wickets; bowling: its negative.",
+  "limitations": [
+    "Uncalibrated simulator",
+    "Tiny aliased state table",
+    "No claim of superiority to heuristics",
+    "Inference only; no browser training"
+  ],
+  "models": {
+    "batting": {
+      "file": "batting.npz",
+      "sha256": "d902f85ed51d5953092cb9c3974a60a9b69b5bde18796500957fca1cea819176",
+      "training_metadata": {
+        "role": "batting",
+        "algorithm": "qlearning",
+        "seed": 0,
+        "requested_steps": 8192,
+        "actual_steps": 8192,
+        "seconds": 11.882232094998471,
+        "opponent": "random",
+        "provenance": {
+          "python": "3.12.14",
+          "packages": {
+            "numpy": "2.5.4",
+            "gymnasium": "1.4.0"
+          },
+          "git_commit": "593c14ce92d3cc075e86ec9c9d636e2e6d6e303a",
+          "dirty": true,
+          "observation_version": 3,
+          "source_sha256": {
+            "__init__.py": "beea1e4d09c1854096a5b83811eb2a38d52053d9ec878b54b072417dda3487aa",
+            "api.py": "34e8f55037dca1ae4c17483ce13750121c9efd1742f615a188489f3ec1ccf105",
+            "artifacts.py": "af24e7895841f5973c301c121e73d20dcd70b8fae1f0d1db5482d85a1ed90832",
+            "batting.py": "66af36c662a8b28af9d242bf225b87c7b24c00bec1c8a06bf1caf5d4f27deea9",
+            "benchmark.py": "042cb029745a678107f4fa81a7f66b271233e8334755e6703dd02c6057cf7615",
+            "browser_protocol.py": "c0a694958390745147c155c1fc3ce0768cfc1cf39dafa5e24fdfcc03c2ce82a3",
+            "course_experiment.py": "c31b4f2ad098df3f555831edcd8105ed47cbd0b460813024b98843505e3936ad",
+            "course_plot.py": "2677719fd48a6f3ddb8742b810828ab31b5c3e23941485edfd373e3c6098c81a",
+            "course_study.py": "78b45219a742440b9e6d1fff8639b277800bfaa9e586ff62ab892cad4be309d6",
+            "diagnostics.py": "bdec434c3423bfc90e02e643049e53e92488c578be6eb8aa198484d80810aa71",
+            "env.py": "ff4faeb8c843670c36dc8eaee8f467799f76020c687608af07a86613badbfdd4",
+            "experiment.py": "8fb7db2b0de68af788611383d353bf1b07dac41bc2b926f67da6f3a9dd64e1dd",
+            "gym_backend.py": "c2f60eaf1cfbfba4a9d8303c93fa2aa3ff91ce4571cfef96c3a04f232a235ff2",
+            "physics.py": "11457cd42a93a2d8776cbb9b803112c97d126c56d951464bb8f900fd23c9c939",
+            "remote.py": "b4aec8da4444475c555b6e80790589952a923b28b33d001849acaa6388e2dc6e",
+            "replay.py": "f4dc9d8a9a2363f2b854d9e3cf28236d32915a9d87e2390b155356d5f0408872",
+            "report.py": "2c9bc1cb4ce2d3c2638f013a685eca058f032edac0292dbbe55932195ed43595",
+            "roles.py": "740c0615a870b4bb043962ac2101b48473ccdc13c067de1bed098f7ed69fef56",
+            "rules.py": "a3b42cc9caf6738abb86b7089f6efe6781e1909fa6266d421fb0666246a550e8",
+            "server.py": "8d5104c60374587d9b5b021e4e6288d26975512593c525b860b17dc04f1a2f0f",
+            "session.py": "2e014d7ea1c95358e50447dc9e5a890537b2339acac47bc7ac283e388a96cf1f",
+            "shots.py": "7b26019ace40264c74717c4519b9a50c9da429234ca73480ee5b88ef86909ff6",
+            "validation.py": "f8d8dba2c9c12fede0165f01ce27bc3eea2f608f5f3d1ce5747d9d71d41dac2f"
+          }
+        },
+        "artifact_version": 2,
+        "seed_protocol": "Seed environment once; advance its RNG across episodes. Separate Q exploration stream.",
+        "packages": {
+          "numpy": "2.5.4",
+          "gymnasium": "1.4.0"
+        },
+        "hyperparameters": {
+          "alpha": 0.1,
+          "gamma": 0.99,
+          "epsilon_floor": 0.05,
+          "epsilon_decay_fraction": 0.8,
+          "state_encoding_version": 1
+        }
+      },
+      "mean_rewards": {
+        "familiar": 49.76,
+        "heldout": 30.2
+      }
+    },
+    "bowling": {
+      "file": "bowling.npz",
+      "sha256": "eb6e02c2e5cde10b5367f1ab96d8af17f2bfeb20cacbcd85df0100799082089c",
+      "training_metadata": {
+        "role": "bowling",
+        "algorithm": "qlearning",
+        "seed": 0,
+        "requested_steps": 8192,
+        "actual_steps": 8192,
+        "seconds": 12.652306887001032,
+        "opponent": "scripted",
+        "provenance": {
+          "python": "3.12.14",
+          "packages": {
+            "numpy": "2.5.4",
+            "gymnasium": "1.4.0"
+          },
+          "git_commit": "593c14ce92d3cc075e86ec9c9d636e2e6d6e303a",
+          "dirty": true,
+          "observation_version": 3,
+          "source_sha256": {
+            "__init__.py": "beea1e4d09c1854096a5b83811eb2a38d52053d9ec878b54b072417dda3487aa",
+            "api.py": "34e8f55037dca1ae4c17483ce13750121c9efd1742f615a188489f3ec1ccf105",
+            "artifacts.py": "af24e7895841f5973c301c121e73d20dcd70b8fae1f0d1db5482d85a1ed90832",
+            "batting.py": "66af36c662a8b28af9d242bf225b87c7b24c00bec1c8a06bf1caf5d4f27deea9",
+            "benchmark.py": "042cb029745a678107f4fa81a7f66b271233e8334755e6703dd02c6057cf7615",
+            "browser_protocol.py": "c0a694958390745147c155c1fc3ce0768cfc1cf39dafa5e24fdfcc03c2ce82a3",
+            "course_experiment.py": "c31b4f2ad098df3f555831edcd8105ed47cbd0b460813024b98843505e3936ad",
+            "course_plot.py": "2677719fd48a6f3ddb8742b810828ab31b5c3e23941485edfd373e3c6098c81a",
+            "course_study.py": "78b45219a742440b9e6d1fff8639b277800bfaa9e586ff62ab892cad4be309d6",
+            "diagnostics.py": "bdec434c3423bfc90e02e643049e53e92488c578be6eb8aa198484d80810aa71",
+            "env.py": "ff4faeb8c843670c36dc8eaee8f467799f76020c687608af07a86613badbfdd4",
+            "experiment.py": "8fb7db2b0de68af788611383d353bf1b07dac41bc2b926f67da6f3a9dd64e1dd",
+            "gym_backend.py": "c2f60eaf1cfbfba4a9d8303c93fa2aa3ff91ce4571cfef96c3a04f232a235ff2",
+            "physics.py": "11457cd42a93a2d8776cbb9b803112c97d126c56d951464bb8f900fd23c9c939",
+            "remote.py": "b4aec8da4444475c555b6e80790589952a923b28b33d001849acaa6388e2dc6e",
+            "replay.py": "f4dc9d8a9a2363f2b854d9e3cf28236d32915a9d87e2390b155356d5f0408872",
+            "report.py": "2c9bc1cb4ce2d3c2638f013a685eca058f032edac0292dbbe55932195ed43595",
+            "roles.py": "740c0615a870b4bb043962ac2101b48473ccdc13c067de1bed098f7ed69fef56",
+            "rules.py": "a3b42cc9caf6738abb86b7089f6efe6781e1909fa6266d421fb0666246a550e8",
+            "server.py": "8d5104c60374587d9b5b021e4e6288d26975512593c525b860b17dc04f1a2f0f",
+            "session.py": "2e014d7ea1c95358e50447dc9e5a890537b2339acac47bc7ac283e388a96cf1f",
+            "shots.py": "7b26019ace40264c74717c4519b9a50c9da429234ca73480ee5b88ef86909ff6",
+            "validation.py": "f8d8dba2c9c12fede0165f01ce27bc3eea2f608f5f3d1ce5747d9d71d41dac2f"
+          }
+        },
+        "artifact_version": 2,
+        "seed_protocol": "Seed environment once; advance its RNG across episodes. Separate Q exploration stream.",
+        "packages": {
+          "numpy": "2.5.4",
+          "gymnasium": "1.4.0"
+        },
+        "hyperparameters": {
+          "alpha": 0.1,
+          "gamma": 0.99,
+          "epsilon_floor": 0.05,
+          "epsilon_decay_fraction": 0.8,
+          "state_encoding_version": 1
+        }
+      },
+      "mean_rewards": {
+        "familiar": -32.92,
+        "heldout": -48.66
+      }
+    }
+  }
+}

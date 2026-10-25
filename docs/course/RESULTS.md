@@ -4,14 +4,14 @@ Budget: 18 runs × 8192 requested transitions. 50 evaluation innings per scenari
 
 | Role | Algorithm | Scenario | Mean reward ± seed interval | Runs/innings | Wickets/innings |
 |---|---|---|---:|---:|---:|
-| batting | qlearning | familiar | 55.94 ± 6.04 | 68.85 | 1.61 |
-| batting | qlearning | heldout | 37.10 ± 18.71 | 58.17 | 2.63 |
+| batting | qlearning | familiar | 56.63 ± 15.29 | 68.69 | 1.51 |
+| batting | qlearning | heldout | 40.87 ± 25.59 | 61.45 | 2.57 |
 | batting | ppo | familiar | 60.61 ± 11.75 | 71.11 | 1.31 |
 | batting | ppo | heldout | 49.90 ± 40.22 | 69.53 | 2.45 |
 | batting | dqn | familiar | 63.27 ± 3.82 | 73.67 | 1.30 |
 | batting | dqn | heldout | 57.15 ± 12.27 | 76.08 | 2.37 |
-| bowling | qlearning | familiar | -38.06 ± 11.69 | 51.87 | 1.73 |
-| bowling | qlearning | heldout | -54.06 ± 3.29 | 66.59 | 1.57 |
+| bowling | qlearning | familiar | -40.91 ± 21.23 | 54.25 | 1.67 |
+| bowling | qlearning | heldout | -56.31 ± 26.59 | 68.36 | 1.51 |
 | bowling | ppo | familiar | -68.18 ± 0.00 | 82.26 | 1.76 |
 | bowling | ppo | heldout | -94.12 ± 0.00 | 104.20 | 1.26 |
 | bowling | dqn | familiar | -41.05 ± 11.61 | 50.01 | 1.12 |
@@ -30,16 +30,28 @@ Reward is runs − 8 × wickets for batting, and its negative for bowling. Roles
 
 Intervals are Student-t intervals across training-seed means, not a formal superiority test. The simulator remains uncalibrated. Frozen PPO seed-0 opponents were also exercised in both directions; see study.json. These matches are sequential fixed-policy evaluations, not simultaneous self-play or a win-rate league.
 
-Actual completed budget: **147,456 transitions**, with **0 truncated learned-policy evaluation innings**.
+## Audit revision and interpretation
 
-The batting algorithms exceeded the reactive baseline in mean familiar-condition reward in this pilot. Held-out estimates are uncertain. Bowling learners did not beat the varying heuristic on average. This is a useful learning result: a neural algorithm is not automatically better than a small table or a hand-written rule.
+These results were re-run after correcting Q-learning's truncation bootstrap and
+seeding protocol. The prior version is preserved in
+[the pre-audit report](../research/COURSE_V1_RESULTS.md). This is a regression
+re-evaluation on the same already-published test seeds, not a new blind test or
+proof of convergence. No test-based checkpoint selection was performed.
 
-The frozen batting/bowling model pair produced identical game scores and opposite rewards through the two role interfaces for all 50 matched seeds. This checks the shared simulator integration; it is not a claim of competitive performance.
+All 18 jobs completed 8,192 transitions each (147,456 total); no learned-policy
+evaluation innings were truncated. The frozen PPO pair gave identical innings
+and opposite role rewards in all 50 matched seeds. Both baselines and all training
+seeds are retained. Intervals over three seed means are wide; do not use a point
+estimate alone as a superiority claim.
 
-See [the hands-on lessons](START_HERE.md), [API reference](API.md), and [machine-readable summary](summary.json). Full episode data, checkpoints and training curves remain in `runs/course-study/`.
+The browser's small Q-learning demo tables use predetermined seed 0, not the best
+test model. Their [model card](../../web/models/model-card.json) documents training,
+checksums and limitations. Bowling learners still do not beat the varying
+heuristic on average. This is a useful negative result, not a bug to conceal.
 
-![Role comparison with separate reward scales](assets/comparison.svg)
+![Algorithm comparison](assets/comparison.svg)
 
-![Batting controls in the course dashboard](assets/dashboard.png)
+![Every training seed](assets/learning.svg)
 
-![Every seed learning curve](assets/learning.svg)
+Full outcomes and checkpoints are generated under `runs/audit-course-study/`.
+[Machine-readable summary](summary.json) · [Hands-on lessons](START_HERE.md)

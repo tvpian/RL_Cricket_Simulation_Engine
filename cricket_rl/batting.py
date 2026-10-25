@@ -3,6 +3,7 @@
 The adaptation coefficients are hypotheses for experiments, not fitted batting
 behavior. No bowler reward or repetition penalty is introduced here.
 """
+
 from dataclasses import dataclass
 import numpy as np
 
@@ -17,8 +18,12 @@ class BattingPlan:
         if self.expected_action is None:
             return 0.0, 0.0
         expected_line, expected_length = divmod(self.expected_action, 3)
-        match = float(np.exp(-1.5 * (line - expected_line)**2
-                             - .8 * (length - expected_length)**2))
+        match = float(
+            np.exp(
+                -1.5 * (line - expected_line) ** 2
+                - 0.8 * (length - expected_length) ** 2
+            )
+        )
         return self.confidence * match, self.confidence * (1 - match)
 
 
@@ -29,8 +34,9 @@ class BowlingMemory:
     complete state. Unfaced batters start with no knowledge, even if teammates
     have seen the bowler. Weights retain 75% of previous evidence per delivery.
     """
-    decay = .75
-    prior = .02
+
+    decay = 0.75
+    prior = 0.02
 
     def __init__(self):
         self.weights = np.zeros(9, dtype=np.float64)
@@ -38,7 +44,7 @@ class BowlingMemory:
 
     def observe(self, action):
         if not isinstance(action, (int, np.integer)) or not 0 <= action < 9:
-            raise ValueError('Bowling action must be an integer in [0, 8]')
+            raise ValueError("Bowling action must be an integer in [0, 8]")
         self.weights *= self.decay
         self.weights[int(action)] += 1 - self.decay
         self.last_action = int(action)
@@ -46,9 +52,13 @@ class BowlingMemory:
     def plan(self):
         if not self.weights.any():
             return BattingPlan()
-        probabilities = (self.weights + self.prior) / (self.weights.sum() + 9 * self.prior)
+        probabilities = (self.weights + self.prior) / (
+            self.weights.sum() + 9 * self.prior
+        )
         expected = int(np.argmax(probabilities))
-        confidence = float(np.clip((probabilities[expected] - 1/9) / (1 - 1/9), 0, 1))
+        confidence = float(
+            np.clip((probabilities[expected] - 1 / 9) / (1 - 1 / 9), 0, 1)
+        )
         return BattingPlan(expected, confidence)
 
     def observation(self):

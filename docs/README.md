@@ -8,6 +8,7 @@
 - [Adaptive-batting study](research/ADAPTIVE_RESULTS.md)
 - [Original static-batting study](research/RESULTS.md)
 - [Browser demo and GitHub Pages setup](../web/README.md)
+- [Public-release audit](quality/AUDIT.md)
 - [Original project archive](../legacy/README.md)
 
 The course is the recommended entry point. Research reports preserve earlier

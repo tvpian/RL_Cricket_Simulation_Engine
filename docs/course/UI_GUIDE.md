@@ -54,7 +54,10 @@ Snapshots and lesson-completion flags are stored in this browser when storage is
 available. Storage-disabled browsers retain the current page's snapshots in
 memory. Reflections and delivery journals are not automatically persisted across
 refreshes: download your journal to keep them. No public sharing or automatic
-upload occurs. Inspect a journal before circulating it if your reflections contain
+upload occurs. The browser demo includes declared frozen Q-learning checkpoints;
+selecting one performs inference, not training. Their model card is linked from
+the demo. Runtime recovery preserves earlier journal notes and makes them
+exportable even before you play another delivery. Inspect a journal before circulating it if your reflections contain
 private information.
 
 A community contribution should include a hypothesis, settings, algorithm,
